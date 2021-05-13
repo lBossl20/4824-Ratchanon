@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กฎการเคลื่อนที่ของนิวตัน</title>
+    <script>
+        function basicCalculation(){
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var res;
+            var operation = document.getElementById("operator").value
+            if(operation ==="+"){
+                res = n1+n2;
+            }
+            if(operation ==="-"){
+                res = n1-n2;
+            }
+            if(operation ==="*"){
+                res = n1*n2;
+            }
+            if(operation ==="/"){
+                res = n1/n2;
+            }
+            document.getElementById("result").value = res.toFixed(2);
+        }
+    </script>
+    <script>
+        function CtoF(){
+            let C = parseFloat(document.getElementById("cel").value);
+            let F = (C*9/5)+32;
+            document.getElementById("fah").value = F.toFixed(2);
+        }
+        function FtoC(){
+            let F = parseFloat(document.getElementById("fah").value);
+            let C = (F-32)*(5/9)
+            document.getElementById("cel").value = C.toFixed(2);
+        }
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 450px;
+        }
+        h1{
+            font-size: 30px;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        h2{
+            text-align: center;
+            font-size: 50px;
+            font-family:sans-serif;
+            color: rgb(49, 0, 228);
+            text-shadow: 5px 5px 10px rgb(2, 2, 2);
+        }
+        .div h3{
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 5px 5px 10px violet;
+        }
+        .div pre{
+            font-size: 30px;
+            color: blueviolet;
+          text-shadow: 5px 5px 10px whitesmoke;  
+        }
+
+        .div{
+            border: 5px solid rgb(0, 0, 0);
+            box-shadow: 5px 5px 10px  rgb(143, 226, 219);
+            border-radius: 20px;
+            margin: 15px;
+            background-color: #f8f8f8;
+        }
+        
+       
+    </style>  
+</head>
+<body>
+    <h2> กฎการเคลื่อนที่ของนิวตัน</h2>
+    <div class="div">
+        <h3> กฎการเคลื่อนที่ของนิวตัน </h3>
+        <pre>      กฎการเคลื่อนที่ของนิวตันเป็นกฎทางกายภาพสามข้อที่เป็นรากฐานของกลศาสตร์ดั้งเดิม 
+            ใช้สำหรับการอธิบายความสัมพันธ์ระหว่างวัตถุกับแรงที่กระทำต่อวัตถุนั้น 
+            และการเคลื่อนที่เนื่องจากแรงเหล่านั้นโดยในกฎข้อแรกเป็นการนิยามความหมายของแรง 
+            กฎข้อที่สองให้วิธีการวัดแรงในเชิงปริมาณ และกฎข้อที่สามอ้างว่าไม่มีแรงโด่ดเดี่ยว 
+            ในสามร้อยปีที่ผ่านมากฎทั้งสามข้อได้รับการตีความในหลาย ๆ ด้าน
+            และสามารถสรุปได้ดังนี้
+
+            กฎข้อที่หนึ่ง:ในกรอบอ้างอิงเฉื่อย วัตถุจะยังคงหยุดนิ่งหรือเคลื่อนที่ด้วยความเร็วคงที่ 
+                     เว้นแต่จะมีแรงมากระทำ[2][3]
+            กฎข้อที่สอง:ในกรอบอ้างอิงเฉื่อยผลรวมของเวกเตอร์ของแรง F บนวัตถุมีค่าเท่ากับมวล m 
+                      ของวัตถุนั้นคูณด้วยความเร่ง a ของวัตถุ: F = ma 
+            กฎข้อที่สาม:เมื่อวัตถุหนึ่งออกแรงกระทำต่ออีกวัตถุหนึ่ง 
+                      จะมีแรงขนาดเท่ากันแต่ทิศทางตรงข้ามกับทิศทางของวัตถุแรก
+                      ไอแซก นิวตัน ได้ทำการรวบรวมกฎการเคลื่อนที่ทั้งสามข้อไว้ในหนังสือ 
+                      Philosophiæ Naturalis Principia Mathematica
+                      (Mathematical Principles of Natural Philosophy) 
+                      ซึ่งตีพิมพ์ครั้งแรกในปี ค.ศ. 1687[4] 
+                      โดยนิวตันใช้กฎเหล่านี้เพื่ออธิบายและตรวจสอบการเคลื่อนที่
+                      ของวัตถุและระบบทางกายภาพ
+                      ยกตัวอย่างเช่นในเล่มที่สามของตำรา
+                      นิวตันแสดงให้เห็นว่ากฎการเคลื่อนที่เหล่านี้รวมกับกฎความโน้มถ่วงสากล
+                      สามารถอธิบายกฎของเคปเลอร์เกี่ยวกับการเคลื่อนที่ของดาวเคราะห์ได้
+            
+               บางครั้งอาจมีการพูดถึง กฎข้อที่สี่ ซึ่งระบุว่าแรงเป็นปริมาณเวกเตอร์
+               คือเป็นไปตามหลักการซ้อนทับ</pre>
+   
+    </div>
+</body>
+</html>

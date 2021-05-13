@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กฎการเคลื่อนที่ของนิวตัน</title>
+    <script>
+        function basicCalculation(){
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var res;
+            var operation = document.getElementById("operator").value
+            if(operation ==="+"){
+                res = n1+n2;
+            }
+            if(operation ==="-"){
+                res = n1-n2;
+            }
+            if(operation ==="*"){
+                res = n1*n2;
+            }
+            if(operation ==="/"){
+                res = n1/n2;
+            }
+            document.getElementById("result").value = res.toFixed(2);
+        }
+    </script>
+    <script>
+        function CtoF(){
+            let C = parseFloat(document.getElementById("cel").value);
+            let F = (C*9/5)+32;
+            document.getElementById("fah").value = F.toFixed(2);
+        }
+        function FtoC(){
+            let F = parseFloat(document.getElementById("fah").value);
+            let C = (F-32)*(5/9)
+            document.getElementById("cel").value = C.toFixed(2);
+        }
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 450px;
+        }
+        .Calculator{
+            width: 400px;
+            height: 400px;
+            border: 5px solid rgb(248, 183, 122);
+            border-radius: 20px;
+            background-color: greenyellow;
+            padding: 15px;
+            margin: 20px;
+            padding-left: 40px;
+            font-family:sans-serif;
+            box-shadow: 5px 5px 10px  rgb(250, 192, 138);
+        }
+        .Calculator h1{
+            text-align: center;
+            color: rgb(255, 0, 212);
+        }
+        .Calculator input{
+            background-color: violet;
+            padding: 10px;
+            margin: 5px;
+            font-size: 30px;
+            box-shadow:6px 5px 10px rgb(187, 2, 211) ;
+            color: rgb(251, 255, 0);
+        }
+        .Calculator button{
+            background-color: rgb(118, 134, 228);
+            font-size: 30px;
+            padding: 5px;
+            box-shadow:6px 5px 10px rgb(165, 116, 177) ;
+            color: rgb(247, 157, 247);
+        }
+        .Calculator select{
+            background-color: wheat;
+            padding: 9px;
+            font-size: 30px;
+            box-shadow:6px 5px 10px rgb(239, 240, 178) ;
+            color: rgb(165, 51, 51);
+        }
+        .TempConversion{
+            width: 400px;
+            height: 400px;
+            border: 5px solid rgb(248, 183, 122);
+            border-radius: 20px;
+            background-color: greenyellow;
+            padding: 15px;
+            margin: 20px;
+            padding-left: 40px;
+            font-family: sans-serif;
+            box-shadow: 5px 5px 10px  rgb(250, 192, 138);          
+        }
+        .TempConversion h1{
+            text-align: center;
+            color: rgb(255, 0, 212);
+        }
+        .TempConversion input{
+            background-color: violet;
+            padding: 10px;
+            margin: 10px;
+            font-size: 30px;
+            box-shadow:6px 5px 10px rgb(187, 2, 211) ;
+            color: rgb(251, 255, 0);
+        }
+        .TempConversion button{
+            background-color: rgb(118, 134, 228);
+            font-size: 25px;
+            padding: 13px;
+            box-shadow:6px 5px 10px rgb(165, 116, 177) ;
+            color: rgb(247, 157, 247);
+        }
+        h1{
+            font-size: 30px;
+        }
+        body{
+            background-color: rgb(240, 228, 179);
+        }
+        h2{
+            text-align: center;
+            font-size: 50px;
+            font-family:sans-serif;
+            color: rgb(228, 0, 76);
+            text-shadow: 5px 5px 10px rgb(236, 115, 155);
+        }
+        .div h3{
+            color: rgb(68, 0, 146);
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 5px 5px 10px rgb(139, 107, 177);
+        }
+        .div pre{
+            font-size: 30px;
+            color: rgb(112, 10, 70);
+        }
+        .div{
+            border: 5px solid rgb(240, 164, 93);
+            box-shadow: 5px 5px 10px  rgb(255, 182, 113);
+            border-radius: 20px;
+            margin: 15px;
+            background-color: #f5d1b4;
+        }
+        img{
+            margin-left: 850px;
+            border-radius: 60px;
+            border: 7px solid #eb944e;
+            box-shadow: 5px 5px 10px  #df985e;
+        }
+        label{
+            font-size: 30px;
+            color: rgb(0, 140, 255);
+        }
+    </style>  
+</head>
+<body>
+    <h2>&#128038; Temperature Conversion &#128038;</h2>
+    <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Anders-Celsius-Head.jpg/173px-Anders-Celsius-Head.jpg" alt="">
+    <div class="div">
+        <h3>&#127926; กฎการเคลื่อนที่ของนิวตัน &#127926;</h3>
+        <pre>      กฎการเคลื่อนที่ของนิวตันเป็นกฎทางกายภาพสามข้อที่เป็นรากฐานของกลศาสตร์ดั้งเดิม ใช้สำหรับการอธิบายความสัมพันธ์ระหว่างวัตถุกับแรงที่กระทำต่อวัตถุนั้น และการเคลื่อนที่เนื่องจากแรงเหล่านั้น โดยในกฎข้อแรกเป็นการนิยามความหมายของแรง กฎข้อที่สองให้วิธีการวัดแรงในเชิงปริมาณ และกฎข้อที่สามอ้างว่าไม่มีแรงโด่ดเดี่ยว ในสามร้อยปีที่ผ่านมากฎทั้งสามข้อได้รับการตีความในหลาย ๆ ด้าน[1] และสามารถสรุปได้ดังนี้
+
+            กฎข้อที่หนึ่ง:	ในกรอบอ้างอิงเฉื่อย วัตถุจะยังคงหยุดนิ่งหรือเคลื่อนที่ด้วยความเร็วคงที่ เว้นแต่จะมีแรงมากระทำ[2][3]
+            กฎข้อที่สอง:	ในกรอบอ้างอิงเฉื่อยผลรวมของเวกเตอร์ของแรง F บนวัตถุมีค่าเท่ากับมวล m ของวัตถุนั้นคูณด้วยความเร่ง a ของวัตถุ: F = ma (สมมุติว่ามวล m เป็นค่าคงที่ ดูด้านล่าง )
+            กฎข้อที่สาม:	เมื่อวัตถุหนึ่งออกแรงกระทำต่ออีกวัตถุหนึ่ง จะมีแรงขนาดเท่ากันแต่ทิศทางตรงข้ามกับทิศทางของวัตถุแรก
+            ไอแซก นิวตัน ได้ทำการรวบรวมกฎการเคลื่อนที่ทั้งสามข้อไว้ในหนังสือ Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy) ซึ่งตีพิมพ์ครั้งแรกในปี ค.ศ. 1687[4] โดยนิวตันใช้กฎเหล่านี้เพื่ออธิบายและตรวจสอบการเคลื่อนที่ของวัตถุและระบบทางกายภาพ[5] ยกตัวอย่างเช่นในเล่มที่สามของตำรา นิวตันแสดงให้เห็นว่ากฎการเคลื่อนที่เหล่านี้รวมกับกฎความโน้มถ่วงสากล สามารถอธิบายกฎของเคปเลอร์เกี่ยวกับการเคลื่อนที่ของดาวเคราะห์ได้
+            
+            บางครั้ง อาจมีการพูดถึง กฎข้อที่สี่ ซึ่งระบุว่าแรงเป็นปริมาณเวกเตอร์ คือเป็นไปตามหลักการซ้อนทับ</pre>
+   
+    </div>
+    <div class="container">
+    <!-- Basic Calculation -->
+        <div class="Calculator">
+            <h1>Basic Calculator</h1>
+            <label for="">NUMBER1</label>
+            <br>
+            <input type="text" name="" id="num1" size="11">
+            <select name="" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <br>
+            <label for="">NUMBER2</label>
+            <br>
+            <input type="text" name="" id="num2" size="11">
+            <br>
+            <label for="">RESLT</label>
+            <br>
+            <input type="text" name="" id="result" size="11">
+            <button onclick="basicCalculation()">ENTER</button>
+        </div>
+    <!-- Temperature Conversion -->
+         <div class="TempConversion">
+            <h1>Temperature Conversion</h1>
+            <label for="">CELCIUS(&#8451;)</label>
+            <br>
+            <input type="text" name="" id="cel" size="10">
+            <button onclick="CtoF()">C to F</button>
+            <br>
+            <label for="">FAHRENHEIT(&#8457;)</label>
+            <br>
+            <input type="text" name="" id="fah" size="10">
+            <button onclick="FtoC()">F to C</button> 
+         </div>    
+    </div>
+</body>
+</html>

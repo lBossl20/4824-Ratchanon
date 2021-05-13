@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การอินทิเกรต เเคลคูลัส ม.ปลาย</title>
+    <script>
+        function basicCalculation(){
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var res;
+            var operation = document.getElementById("operator").value
+            if(operation ==="+"){
+                res = n1+n2;
+            }
+            if(operation ==="-"){
+                res = n1-n2;
+            }
+            if(operation ==="*"){
+                res = n1*n2;
+            }
+            if(operation ==="/"){
+                res = n1/n2;
+            }
+            document.getElementById("result").value = res.toFixed(2);
+        }
+    </script>
+    <script>
+        function CtoF(){
+            let C = parseFloat(document.getElementById("cel").value);
+            let F = (C*9/5)+32;
+            document.getElementById("fah").value = F.toFixed(2);
+        }
+        function FtoC(){
+            let F = parseFloat(document.getElementById("fah").value);
+            let C = (F-32)*(5/9)
+            document.getElementById("cel").value = C.toFixed(2);
+        }
+    </script>
+    <style>
+        body{
+            background-color: rgb(99, 145, 245);
+        }
+        h2{
+            text-align: center;
+            font-size: 50px;
+            font-family:sans-serif;
+            color: rgb(11, 97, 25);
+            text-shadow: 5px 5px 10px rgb(230, 212, 50);
+        }
+        .div h3{
+            color: rgb(68, 0, 146);
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 5px 5px 10px rgb(139, 107, 177);
+        }
+       
+      
+        img{
+            margin-right: 850px;
+            border-radius: 60px;
+            border: 7px solid #eb944e;
+            box-shadow: 5px 5px 10px  #df985e;
+        }
+       
+    </style>  
+</head>
+<body>
+    <h2> การอินทิเกรต เเคลคูลัส ม.ปลาย</h2>
+    <div class="div">
+        <img src="8.jpg", width= 1275px , height= 855px;>
+        <img src="9.jpg", width= 1275px , height= 855px;>
+    </div>
+</body>
+</html>
